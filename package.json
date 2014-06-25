@@ -1,0 +1,12 @@
+{
+  "name": "language-pig",
+  "version": "0.0.1",
+  "description": "Pig syntax highlighting for Atom",
+  "repository": "https://github.com/lumengxi/language-pig",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
