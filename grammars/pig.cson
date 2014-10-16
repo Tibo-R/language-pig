@@ -1,59 +1,149 @@
-'fileTypes': [
-  'pig'
-  'piglet'
-]
-'name': 'Pig'
-'patterns': [
-  {
-    'match': '\\b(?i:all|and|as|asc|by|cube|cogroup|cross|debug|default_parallel|define|dense|desc|describe|distinct|dump|explain|filter|flatten|foreach|generate|group|if|illustrate|inner|into|is|job.name|join|limit|load|mapreduce|matches|not|null|or|order|outer|parallel|rank|register|sample|set|split|store|stream|stream.skippath|through|union|using)\\b'
-    'name': 'keyword.operator.pig'
-  }
-  {
-    'begin': '--'
-    'end': '$'
-    'name': 'comment.line.double-dash.pig'
-  }
-  {
-    'begin': '/\\*'
-    'end': '\\*/'
-    'name': 'comment.block.pig'
-  }
-  {
-    'begin': '\''
-    'end': '\''
-    'name': 'string.quoted.single.pig'
-    'patterns': [
-      {
-        'match': '(\\$)[a-zA-Z]([a-zA-Z0-9_]*)'
-        'name': 'variable.other.pig'
-      }
+{
+    "fileTypes": [
+        "pig"
     ]
-  }
-  {
-    'match': '(\\$)[a-zA-Z]([a-zA-Z0-9_]*)'
-    'name': 'variable.other.pig'
-  }
-  {
-    'match': '(\\$)[0-9]+'
-    'name': 'variable.language.pig'
-  }
-  {
-    'match': '\\b(bag|bytearray|boolean|chararray|datetime|double|float|int|long|map|tuple)\\b'
-    'name': 'constant.language.pig'
-  }
-  {
-    'match': '^(%declare|%default)\\s'
-    'name': 'keyword.control.import.pig'
-  }
-  {
-    'match': '\\b((([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|F|f)?\\b'
-    'name': 'constant.numeric.pig'
-  }
-  {
-    'captures':
-      '1':
-        'name': 'entity.name.function.pig'
-    'match': '\\b([a-zA-Z0-9_\\.]*?)\\('
-  }
-]
-'scopeName': 'source.pig'
+    "name": "Pig"
+    "patterns": [
+        {
+            "begin": "/\\*"
+            "end": "\\*/"
+            "name": "comment.block.pig"
+        }
+        {
+            "match": "(--).*$\\n?"
+            "name": "comment.line.double-dash.asciidoc"
+        }
+        {
+            "match": "\\b(?i:ASSERT|LOAD|STORE|DUMP|FILTER|DISTINCT|FOREACH|GENERATE|STREAM|JOIN|COGROUP|GROUP|CROSS|ORDER|LIMIT|UNION|SPLIT|DESCRIBE|EXPLAIN|ILLUSTRATE|AS|BY|INTO|USING|LIMIT|PARALLEL|OUTER|INNER|DEFAULT|LEFT|SAMPLE|RANK|CUBE|ALL|KILL|QUIT|MAPREDUCE|ASC|DESC|THROUGH|SHIP|CACHE|DECLARE|CASE|WHEN|THEN|END|IN|PARTITION|FULL|IF|ONSCHEMA|INPUT|OUTPUT)\\b"
+            "name": "keyword.control.pig"
+        }
+        {
+            "match": "\\b(?i:int|long|float|double|chararray|bytearray|boolean|datetime|biginteger|bigdecimal|tuple|bag|map)\\b"
+            "name": "storage.datatypes.pig"
+        }
+        {
+            "match": "\\b(PigStorage|BinStorage|BinaryStorage|PigDump|HBaseStorage|JsonLoader|JsonStorage|AvroStorage|TextLoader|PigStreaming|TrevniStorage|AccumuloStorage)\\b"
+            "name": "support.function.storage.pig"
+        }
+        {
+            "match": "\\b(DIFF|TOBAG|TOMAP|TOP|TOTUPLE|RANDOM|FLATTEN|flatten|CUBE|ROLLUP|IsEmpty|ARITY|PluckTuple|SUBTRACT|BagToString|ABS|ACOS|ASIN|ATAN|CBRT|CEIL|COS|COSH|EXP|FLOOR|LOG|LOG10|ROUND|ROUND_TO|SIN|SINH|SQRT|TAN|TANH|AVG|COUNT|COUNT_STAR|MAX|MIN|SUM|COR|COV)\\b"
+            "name": "support.function.pig"
+        }
+        {
+            "match": "\\b(CONCAT|INDEXOF|LAST_INDEX_OF|LCFIRST|LOWER|REGEX_EXTRACT|REGEX_EXTRACT_ALL|REPLACE|SIZE|STRSPLIT|SUBSTRING|TOKENIZE|TRIM|UCFIRST|UPPER|LTRIM|RTRIM|ENDSWITH|STARTSWITH|TRIM)\\b"
+            "name": "support.function.udf.string.pig"
+        }
+        {
+            "match": "\\b(AddDuration|CurrentTime|DaysBetween|GetDay|GetHour|GetMilliSecond|GetMinute|GetMonth|GetSecond|GetWeek|GetWeekYear|GetYear|HoursBetween|MilliSecondsBetween|MinutesBetween|MonthsBetween|SecondsBetween|SubtractDuration|ToDate|WeeksBetween|YearsBetween|ToMilliSeconds|ToString|ToUnixTime)\\b"
+            "name" : "entity.name.function.pig"
+        }
+        {
+            "match": "\\b(cat|cd|copyFromLocal|copyToLocal|cp|ls|mkdir|mv|pwd|rm)\\b"
+            "name": "support.function.command.pig"
+        }
+        {
+            "match": "\\$[a_zA-Z0-9_]+"
+            "name": "variable.pig"
+        }
+        {
+            "match": "(?i)\\b(NULL|true|false|stdin|stdout|stderr|BLOCK)\\b"
+            "name" : "constant.language.pig"
+        }
+        {
+            "match": "\\b\\d+(\\.\\d+)?\\b"
+            "name" : "constant.numeric.pig"
+        }
+        {
+            "match": "(?i)!=|==|<|>|<=|>=|(?:\\b(?:MATCHES|IS|OR|AND|NOT)\\b)"
+            "name": "keyword.operator.comparison.pig"
+        }
+        {
+            "match": "(\\+|\\-|\\*|\\/|\\%|\\?|:|::|\\.\\.|#)"
+            "name": "keyword.operator.arithmetic.pig"
+        }
+        {
+            "begin": "\""
+            "end": "\""
+            "name": "string.quoted.double.pig"
+            "patterns": [
+                {
+                    "match": "\\\\."
+                    "name": "constant.character.escape.pig"
+                }
+            ]
+        }
+        {
+            "begin": "'"
+            "end": "'"
+            "name": "string.quoted.single.pig"
+            "patterns": [
+                {
+                    "match": "\\\\."
+                    "name": "constant.character.escape.pig"
+                }
+            ]
+        }
+        {
+            "captures": {
+                "1": {
+                    "name": "storage.type.variable.pig"
+                }
+            }
+            "match": "(?i)^\\s*([a-z_][a-z0-9_]*)\\s*(?:=)"
+        }
+        {
+            "begin": "(?i)^\\s*(set)\\s+(\\S+)"
+            "end": "$"
+            "beginCaptures": {
+                "1" : { "name" : "keyword.parameter.pig"}
+                "2" : { "name" : "storage.type.parameter.pig"}
+            }
+            "patterns": [
+                { "include": "$self" }
+            ]
+        }
+        {
+            "captures": {
+                "1": {
+                    "name": "keyword.alias.pig"
+                }
+                "2": {
+                    "name": "storage.type.alias.pig"
+                }
+                "3": {
+                    "name": "keyword.alias.pig"
+                }
+                "4": {
+                    "name": "constant.pig"
+                }
+                "5": {
+                    "name": "keyword.alias.pig"
+                }
+                "6": {
+                    "name": "entity.name.function.pig"
+                }
+            }
+            "begin": "(?i)\\s*(REGISTER)\\s+(\\S+)\\s*(USING)\\s+(\\S+)\\s*(AS)\\s+(\\S+)"
+            "end":";?$"
+        }
+        {
+            "captures": {
+                "1": {
+                    "name": "keyword.alias.pig"
+                }
+                "2": {
+                    "name": "storage.type.alias.pig"
+                }
+            }
+            "begin": "(?i)\\s*(DEFINE|DECLARE|REGISTER|IMPORT)\\s+(\\S+)"
+            "end":";?$"
+        }
+        {
+            'captures':
+              '1':
+                'name': 'entity.name.function.pig'
+            'match': '\\b([a-zA-Z0-9_\\.]*?)\\('
+          }
+    ]
+    "scopeName": "source.pig"
+}

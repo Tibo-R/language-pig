@@ -1,8 +1,8 @@
 {
-  "name": "language-pig",
-  "version": "0.1.0",
+  "name": "pig",
+  "version": "0.0.0",
   "description": "Pig syntax highlighting for Atom",
-  "repository": "https://github.com/lumengxi/language-pig",
+  "repository": "https://github.com/tibo-r/language-pig",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

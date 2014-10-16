@@ -1,6 +1,10 @@
-# language-pig package
+# Pig package for Atom
 
 Adds syntax highlighting and snippets to Pig scripts in Atom.
 
-Difference with initial package :
- - The commenting shortcut (ctrl+/) now use single line comment '--' instead of '/* */'
+And more to come ...
+
+#Based on the work from :
+
+- lumengxi : https://github.com/lumengxi/language-pig (atom package)
+- chrislongo : https://github.com/chrislongo/Pig (sublime-text package)

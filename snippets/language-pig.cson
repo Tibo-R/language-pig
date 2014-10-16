@@ -1,13 +1,13 @@
 '.source.pig':
   'load table':
-    'prefix': 'load'
-    'body': 'load ${1:filename}'
+    'prefix': 'LOAD'
+    'body': 'LOAD ${1:filename}'
   'flatten':
-    'prefix': 'flatten'
-    'body': 'flatten(${1:var})'
+    'prefix': 'FLATTEN'
+    'body': 'FLATTEN(${1:var})'
   'matches':
-    'prefix': 'matches'
-    'body': "matches '${1:pattern}'"
+    'prefix': 'MATCHES'
+    'body': "MATCHES '${1:pattern}'"
   'average':
     'prefix': 'AVG'
     'body': 'AVG(${1:expr})'
