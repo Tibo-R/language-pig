@@ -1,6 +1,6 @@
 {
   "name": "pig",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pig syntax highlighting for Atom",
   "repository": "https://github.com/tibo-r/language-pig",
   "license": "MIT",
