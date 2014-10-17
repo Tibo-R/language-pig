@@ -41,6 +41,9 @@
   'tokenize':
     'prefix': 'TOKENIZE'
     'body': 'TOKENIZE(${1:expr})'
+  'tokenize w/ delim':
+    'prefix': 'TOKENIZE'
+    'body': "TOKENIZE(${1:expr}, '${2:field_delimiter}')"
   'abs':
     'prefix': 'ABS'
     'body': 'ABS(${1:expr})'
@@ -130,4 +133,241 @@
     'body': 'UPPER(${1:string})'
   'top':
     'prefix' : 'TOP'
-    'body': 'TOP(${1:topN}, ${2:column}, ${3:relation)'
+    'body': 'TOP(${1:topN}, ${2:column}, ${3:relation})'
+  'BagToString':
+    'prefix' : 'BagToString'
+    "body": "BagToString(${1:bag}, ${2:delim})"
+  'SUBSTRACT':
+    'prefix': 'SUBTRACT'
+    "body" : "SUBTRACT(${1:expr}, ${2:expr})"
+  'ROUND_TO(val, digits)':
+    'prefix': 'ROUND_TO'
+    "body" : "ROUND_TO(${1:val}, ${2:digits})"
+  'ROUND_TO w/ mode':
+    'prefix': 'ROUND_TO'
+    "body" : "ROUND_TO(${1:val}, ${2:digits}, ${3:mode})"
+  "ENDSWITH":
+    'prefix': "ENDSWITH"
+    "body" : "ENDSWITH(${1:string}, ${2:testAgainst})"
+  "EqualsIgnoreCase":
+    'prefix': "EqualsIgnoreCase"
+    "body" : "EqualsIgnoreCase(${1:string}, ${2:string})"
+  "LCFIRST":
+    'prefix': "LCFIRST"
+    "body" : "LCFIRST(${1:string})"
+  "LTRIM":
+    'prefix': "LTRIM"
+    "body" : "LTRIM(${1:string})"
+  "RTRIM":
+    'prefix': "RTRIM"
+    "body" : "RTRIM(${1:string})"
+  "STARTSWITH":
+    'prefix': "STARTSWITH"
+    "body" : "STARTSWITH(${1:string}, ${2:testAgainst})"
+  "UCFIRST":
+    'prefix': "UCFIRST"
+    "body" : "UCFIRST(${1:string})"
+  "TOBAG":
+    'prefix': "TOBAG"
+    "body" : "TOBAG(${1:expr})"
+  "TOTUPLE":
+    'prefix': "TOTUPLE"
+    "body" : "TOTUPLE(${1:expr})"
+  "TOMAP":
+    'prefix': "TOMAP"
+    "body" : "TOMAP(${1:key}, ${2:value})"
+  "int":
+    'prefix': "int"
+  "long":
+    'prefix': "long"
+  "float":
+    'prefix': "float"
+  "double":
+    'prefix': "double"
+  "chararray":
+    'prefix': "chararray"
+  "bytearray":
+    'prefix': "bytearray"
+  "boolean":
+    'prefix': "boolean"
+  "datetime":
+    'prefix': "datetime"
+  "biginteger":
+    'prefix': "biginteger"
+  "bigdecimal":
+    'prefix': "bigdecimal"
+  "tuple":
+    'prefix': "tuple"
+  "bag":
+    'prefix': "bag"
+  "map":
+    'prefix': "map"
+  "ALL ":
+    'prefix': "ALL "
+  "AS ":
+    'prefix': "AS "
+  "ASSERT ":
+    'prefix': "ASSERT "
+  "BY ":
+    'prefix': "BY "
+  "COGROUP ":
+    'prefix': "COGROUP "
+  "CROSS ":
+    'prefix': "CROSS "
+  "DEFINE ":
+    'prefix': "DEFINE "
+  "DISTINCT ":
+    'prefix': "DISTINCT "
+  "FILTER ":
+    'prefix': "FILTER "
+  "FOREACH ":
+    'prefix': "FOREACH "
+  "GROUP ":
+    'prefix': "GROUP "
+  "IMPORT ":
+    'prefix': "IMPORT "
+  "INTO ":
+    'prefix': "INTO "
+  "JOIN ":
+    'prefix': "JOIN "
+  "LIMIT ":
+    'prefix': "LIMIT "
+  "LOAD ":
+    'prefix': "LOAD "
+  "MAPREDUCE ":
+    'prefix': "MAPREDUCE "
+  "ORDER":
+    'prefix': "ORDER BY "
+  "SAMPLE ":
+    'prefix': "SAMPLE "
+  "SPLIT ":
+    'prefix': "SPLIT "
+  "STORE ":
+    'prefix': "STORE "
+  "STREAM ":
+    'prefix': "STREAM "
+  "THROUGH ":
+    'prefix': "THROUGH "
+  "UNION ":
+    'prefix': "UNION "
+  "RETURNS ":
+    'prefix': "RETURNS "
+  "RANK ":
+    'prefix': "RANK "
+  "CUBE ":
+    'prefix': "CUBE "
+  "ROLLUP ":
+    'prefix': "ROLLUP "
+  "DESC ":
+    'prefix': "DESC "
+  "DUMP ":
+    'prefix': "DUMP "
+  "DESCRIBE ":
+    'prefix': "DESCRIBE "
+  "EXPLAIN ":
+    'prefix': "EXPLAIN "
+  "GENERATE ":
+    'prefix': "GENERATE "
+  "ILLUSTRATE ":
+    'prefix': "ILLUSTRATE "
+  "USING ":
+    'prefix': "USING "
+  "REGISTER ":
+    'prefix': "REGISTER "
+  "PARALLEL" :
+    'prefix': "PARALLEL "
+  "BinStorage":
+    'prefix': "BinStorage()"
+  "PigStorage":
+    'prefix': "PigStorage()"
+  "TextLoader":
+    'prefix': "TextLoader()"
+  "JsonLoader":
+    'prefix': "JsonLoader()"
+  "JsonLoader w/ schema":
+    'prefix': "JsonLoader(schema)"
+    "body" : "JsonLoader(${1:schema})"
+  "PigStorage w/ delim":
+    'prefix': "PigStorage(delim)"
+    "body" : "PigStorage('${1:delim}')"
+  "PigStorage w/ delim, options":
+    'prefix': "PigStorage(delim, options)"
+    "body" : "PigStorage('${1:delim}', ${2:options})"
+  "CurrentTime":
+    'prefix': "CurrentTime()"
+  "DaysBetween":
+    'prefix': "DaysBetween"
+    "body" : "DaysBetween(${1:datetime1}, ${2:
+    datetime2})"
+  "GetDay":
+    'prefix': "GetDay"
+    "body" : "GetDay(${1:datetime})"
+  "GetHour":
+    'prefix': "GetHour"
+    "body" : "GetHour(${1:datetime})"
+  "GetMilliSecond":
+    'prefix': "GetMilliSecond"
+    "body" : "GetMilliSecond(${1:datetime})"
+  "GetMinute":
+    'prefix': "GetMinute"
+    "body" : "GetMinute(${1:datetime})"
+  "GetMonth":
+    'prefix': "GetMonth"
+    "body" : "GetMonth(${1:datetime})"
+  "GetSecond":
+    'prefix': "GetSecond"
+    "body" : "GetSecond(${1:datetime})"
+  "GetWeek":
+    'prefix': "GetWeek"
+    "body" : "GetWeek(${1:datetime})"
+  "GetWeekYear":
+    'prefix': "GetWeekYear"
+    "body" : "GetWeekYear(${1:datetime})"
+  "GetYear":
+    'prefix': "GetYear"
+    "body" : "GetYear(${1:datetime})"
+  "HoursBetween":
+    'prefix': "HoursBetween"
+    "body" : "DaysBetween(${1:datetime1}, ${2:datetime2})"
+  "MilliSecondsBetween":
+    'prefix': "MilliSecondsBetween"
+    "body" : "MilliSecondsBetween(${1:datetime1}, ${2:datetime2})"
+  "MinutesBetween":
+    'prefix': "MinutesBetween"
+    "body" : "MinutesBetween(${1:datetime1}, ${2:datetime2})"
+  "MonthsBetween":
+    'prefix': "MonthsBetween"
+    "body" : "MonthsBetween(${1:datetime1}, ${2:datetime2})"
+  "SecondsBetween":
+    'prefix': "SecondsBetween"
+    "body" : "SecondsBetween(${1:datetime1}, ${2:datetime2})"
+  "SubtractDuration":
+    'prefix': "SubtractDuration"
+    "body" : "SubtractDuration(${1:datetime}, ${2:duration})"
+  "ToDate ms":
+    'prefix': "ToDate(milliseconds)"
+    "body" : "ToDate(${1:milliseconds})"
+  "ToDate string":
+    'prefix': "ToDate(string)"
+    "body" : "ToDate(${1:string})"
+  "ToDate w/ format":
+    'prefix': "ToDate(userstring, format)"
+    "body": "ToDate(${1:userstring}, ${2:format})"
+  "ToDate w/ format, timezone":
+    'prefix': "ToDate(userstring, format, timezone)"
+    "body": "ToDate(${1:userstring}, ${2:format}, ${3:timezone})"
+  "ToMilliSeconds":
+    'prefix': "ToMilliSeconds"
+    "body" : "ToMilliSeconds(${1:datetime})"
+  "ToString":
+    'prefix': "ToString"
+    "body" : "ToString(${1:datetime} [, ${2:format}])"
+  "ToUnixTime":
+    'prefix': "ToUnixTime"
+    "body" : "ToUnixTime(${1:datetime})"
+  "WeeksBetween":
+    'prefix': "WeeksBetween"
+    "body" : "WeeksBetween(${1:datetime1}, ${2:datetime2})"
+  "YearsBetween":
+    'prefix': "YearsBetween"
+    "body" : "YearsBetween(${1:datetime1}, ${2:datetime2})"
