@@ -1,6 +1,6 @@
 {
   "name": "pig",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Pig support : syntax highlighting and autocompletion for most Pig functions and keywords (using 'Autocomplete Snippets')",
   "repository": "https://github.com/tibo-r/atom-pig",
   "license": "MIT",
