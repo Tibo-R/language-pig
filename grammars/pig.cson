@@ -14,7 +14,7 @@
             "name": "comment.line.double-dash.asciidoc"
         }
         {
-            "match": "\\b(?i:ASSERT|LOAD|STORE|DUMP|FILTER|DISTINCT|FOREACH|GENERATE|STREAM|JOIN|COGROUP|GROUP|CROSS|ORDER|LIMIT|UNION|SPLIT|DESCRIBE|EXPLAIN|ILLUSTRATE|AS|BY|INTO|USING|LIMIT|PARALLEL|OUTER|INNER|DEFAULT|LEFT|SAMPLE|RANK|CUBE|ALL|KILL|QUIT|MAPREDUCE|ASC|DESC|THROUGH|SHIP|CACHE|DECLARE|CASE|WHEN|THEN|END|IN|PARTITION|FULL|IF|ONSCHEMA|INPUT|OUTPUT)\\b"
+            "match": "\\b(?i:ASSERT|LOAD|STORE|DUMP|FILTER|DISTINCT|FOREACH|GENERATE|STREAM|JOIN|COGROUP|GROUP|CROSS|ORDER|LIMIT|UNION|SPLIT|DESCRIBE|EXPLAIN|ILLUSTRATE|AS|BY|INTO|USING|LIMIT|PARALLEL|OUTER|INNER|DEFAULT|LEFT|SAMPLE|RANK|CUBE|ALL|KILL|QUIT|MAPREDUCE|ASC|DESC|THROUGH|SHIP|CACHE|DECLARE|CASE|WHEN|THEN|END|IN|PARTITION|FULL|IF|ONSCHEMA|INPUT|OUTPUT|RETURNS|DEFINE)\\b"
             "name": "keyword.control.pig"
         }
         {
@@ -42,8 +42,8 @@
             "name": "support.function.command.pig"
         }
         {
-            "match": "\\$[a_zA-Z0-9_]+"
-            "name": "variable.pig"
+            "match": "\\$[a-zA-Z0-9_]+"
+            "name": "parameter.variable.pig"
         }
         {
             "match": "(?i)\\b(NULL|true|false|stdin|stdout|stderr|BLOCK)\\b"
@@ -84,66 +84,70 @@
             ]
         }
         {
-            "captures": {
-                "1": {
+            "captures":
+                "1":
                     "name": "storage.type.variable.pig"
-                }
-            }
             "match": "(?i)^\\s*([a-z_][a-z0-9_]*)\\s*(?:=)"
         }
         {
             "begin": "(?i)^\\s*(set)\\s+(\\S+)"
             "end": "$"
-            "beginCaptures": {
-                "1" : { "name" : "keyword.parameter.pig"}
-                "2" : { "name" : "storage.type.parameter.pig"}
-            }
+            "beginCaptures":
+                "1" :
+                    "name" : "keyword.parameter.pig"
+                "2" :
+                    "name" : "storage.type.parameter.pig"
             "patterns": [
                 { "include": "$self" }
             ]
         }
         {
-            "captures": {
-                "1": {
+            "captures":
+                "1":
                     "name": "keyword.alias.pig"
-                }
-                "2": {
+                "2":
                     "name": "storage.type.alias.pig"
-                }
-                "3": {
+                "3":
                     "name": "keyword.alias.pig"
-                }
-                "4": {
-                    "name": "constant.pig"
-                }
-                "5": {
+                "4":
+                    "name": "variable.parameter.pig"
+                "5":
                     "name": "keyword.alias.pig"
-                }
-                "6": {
+                "6":
                     "name": "entity.name.function.pig"
-                }
-            }
-            "begin": "(?i)\\s*(REGISTER)\\s+(\\S+)\\s*(USING)\\s+(\\S+)\\s*(AS)\\s+(\\S+)"
-            "end":";?$"
+            "match": "(?i)\\s*(REGISTER)\\s+(\\S+)\\s*(USING)\\s+(\\S+)\\s*(AS)\\s*([a-zA-Z0-9_\\.]*?)\\s*;"
         }
         {
-            "captures": {
-                "1": {
+            "captures":
+                "1":
                     "name": "keyword.alias.pig"
-                }
-                "2": {
+                "2":
                     "name": "storage.type.alias.pig"
-                }
-            }
-            "begin": "(?i)\\s*(DEFINE|DECLARE|REGISTER|IMPORT)\\s+(\\S+)"
-            "end":";?$"
+            "match": "(?i)\\s*(DEFINE|DECLARE|REGISTER|IMPORT)\\s+(\\S+)\\s*;"
         }
         {
-            'captures':
+            'begin': '\\b([a-zA-Z0-9_\\.]+?)\\('
+            'beginCaptures':
               '1':
                 'name': 'entity.name.function.pig'
-            'match': '\\b([a-zA-Z0-9_\\.]*?)\\('
-          }
+            'end': '(?=\\))'
+            'patterns': [
+              {
+                'include': '$self'
+              }
+              {
+                'captures':
+                  '1':
+                    'name': 'variable.parameter.function.pig'
+                  '2':
+                    'name': 'punctuation.separator.parameters.pig'
+                'match': '\\b([a-zA-Z_][a-zA-Z_0-9]*)\\s*(?:(,)|(?=[\\n\\)]))'
+                "patterns": [
+                    { "include": "$self" }
+                ]
+              }
+            ]
+        }
     ]
     "scopeName": "source.pig"
 }
