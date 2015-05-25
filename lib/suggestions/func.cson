@@ -1,0 +1,224 @@
+'avg':
+  'displayText': 'AVG()'
+  'snippet': 'AVG(${1:expr})'
+  'description': 'Computes the average of the numeric values in a single-column bag. '
+'concat':
+  'displayText': 'CONCAT()'
+  'snippet': 'CONCAT(${1:expr}, ${2:expr})'
+  'description': 'Concatenates two or more expressions of identical type.'
+'count':
+  'displayText': 'COUNT()'
+  'snippet': 'COUNT(${1:expr})'
+  'description': 'Computes the number of elements in a bag. '
+'count-star':
+  'displayText': 'COUNT_STAR()'
+  'snippet': 'COUNT_STAR(${1:expr})'
+  'description': 'Computes the number of elements in a bag.'
+'diff':
+    'displayText': 'DIFF()'
+    'snippet': 'DIFF(${1:var}, ${2:expr})'
+    'description': 'Compares two fields in a tuple.'
+'isempty':
+  'displayText': 'IsEmpty()'
+  'snippet': 'IsEmpty(${1:expr})'
+  'description': 'Checks if a bag or map is empty.'
+'max':
+  'displayText': 'MAX()'
+  'snippet': 'MAX(${1:expr})'
+  'description': 'Computes the maximum of the numeric values or chararrays in a single-column bag.'
+'min':
+  'displayText': 'MIN()'
+  'snippet': 'MIN(${1:expr})'
+  'description': 'Computes the minimum of the numeric values or chararrays in a single-column bag.'
+'size':
+  'displayText': 'SIZE()'
+  'snippet': 'SIZE(${1:expr})'
+  'description': 'Computes the number of elements based on any Pig data type. '
+'sum':
+  'displayText': 'SUM()'
+  'snippet': 'SUM(${1:expr})'
+  'description': 'Computes the sum of the numeric values in a single-column bag.'
+'tokenize':
+  'displayText': 'TOKENIZE()'
+  'snippet': "TOKENIZE(${1:expr}, '${2:field_delimiter}')"
+  'description': 'Splits a string and outputs a bag of words.'
+'abs':
+  'displayText': 'ABS()'
+  'snippet': 'ABS(${1:expr})'
+  'description': 'Returns the absolute value of an expression.'
+'acos':
+  'displayText': 'ACOS()'
+  'snippet': 'ACOS(${1:expr})'
+  'description': 'Returns the arc cosine of an expression.'
+'asin':
+  'displayText': 'ASIN()'
+  'snippet': 'ASIN(${1:expr})'
+  'description': 'Returns the arc sine of an expression.'
+'atan':
+  'displayText': 'ATAN()'
+  'snippet': 'ATAN(${1:expr})'
+  'description': 'Returns the arc tangent of an expression.'
+'cbrt':
+  'displayText': 'CBRT()'
+  'snippet': 'CBRT(${1:expr})'
+  'description': 'Returns the cube root of an expression.'
+'ceil':
+  'displayText': 'CEIL()'
+  'snippet': 'CEIL(${1:expr})'
+  'description': 'Returns the value of an expression rounded up to the nearest integer.'
+'cos':
+  'displayText': 'COS()'
+  'snippet': 'COS(${1:expr})'
+  'description': 'Returns the trigonometric cosine of an expression.'
+'cosh':
+  'displayText': 'COSH()'
+  'snippet': 'COSH(${1:expr})'
+  'description': 'Returns the hyperbolic cosine of an expression.'
+'exp':
+  'displayText': 'EXP()'
+  'snippet': 'EXP(${1:expr})'
+  'description': 'Returns Euler\'s number e raised to the power of x.'
+'floor':
+  'displayText': 'FLOOR()'
+  'snippet': 'FLOOR(${1:expr})'
+  'description': 'Returns the value of an expression rounded down to the nearest integer.'
+'log':
+  'displayText': 'LOG()'
+  'snippet': 'LOG(${1:expr})'
+  'description': 'Returns the natural logarithm (base e) of an expression.'
+'log10':
+  'displayText': 'LOG10()'
+  'snippet': 'LOG10(${1:expr})'
+  'description': 'Returns the base 10 logarithm of an expression.'
+'random':
+  'displayText': 'RANDOM()'
+  'snippet': 'RANDOM(${1:expr})'
+  'description': 'Returns a pseudo random number.'
+'round':
+  'displayText': 'ROUND()'
+  'snippet': 'ROUND(${1:expr})'
+  'description': 'Returns the value of an expression rounded to an integer.'
+'sin':
+  'displayText': 'SIN()'
+  'snippet': 'SIN(${1:expr})'
+  'description': 'Returns the sine of an expression.'
+'sinh':
+  'displayText': 'SINH()'
+  'snippet': 'SINH(${1:expr})'
+  'description': 'Returns the hyperbolic sine of an expression.'
+'sqrt':
+  'displayText': 'SQRT()'
+  'snippet': 'SQRT(${1:expr})'
+  'description': 'Returns the positive square root of an expression.'
+'tan':
+  'displayText': 'TAN()'
+  'snippet': 'TAN(${1:expr})'
+  'description': 'Returns the trignometric tangent of an angle.'
+'tanh':
+  'displayText': 'TANH()'
+  'snippet': 'TANH(${1:expr})'
+  'description': 'Returns the hyperbolic tangent of an expression. '
+'indexof':
+  'displayText': 'INDEXOF()'
+  'snippet': "INDEXOF(${1:string}, '${2:character}, ${3:startIndex})"
+  'description': 'Returns the index of the first occurrence of a character in a string, searching forward from a start index.'
+'last-index-of':
+  'displayText': 'LAST_INDEX_OF()'
+  'snippet': "LAST_INDEX_OF(${1:string}, '${2:character}', ${3:startIndex})"
+  'description': 'Returns the index of the last occurrence of a character in a string, searching backward from the end of the string.'
+'lower':
+  'displayText': 'LOWER()'
+  'snippet': 'LOWER(${1:string})'
+  'description': 'Converts all characters in a string to lower case.'
+'regex-extract':
+  'displayText': 'REGEX_EXTRACT()'
+  'snippet': "REGEX_EXTRACT(${1:string}, '${2:expression}', ${3:index})"
+  'description': 'Performs regular expression matching and extracts the matched group defined by an index parameter.'
+'regex-extract-all':
+  'displayText': 'REGEX_EXTRACT_ALL ()'
+  'snippet': "REGEX_EXTRACT_ALL(${1:string}, '${2:expression}')"
+  'description': 'Performs regular expression matching and extracts all matched groups.'
+'replace':
+  'displayText': 'REPLACE()'
+  'snippet': "REPLACE(${1:string}, '${2:oldChar}', '${3:newChar}')"
+  'description': 'Replaces existing characters in a string with new characters.'
+'strsplit':
+  'displayText': 'STRSPLIT()'
+  'snippet': "STRSPLIT(${1:string}, '${2:expression}', ${3:limit})'"
+  'description': 'Splits a string around matches of a given regular expression.'
+'strsplittobag':
+  'displayText': 'STRSPLITTOBAG()'
+  'snippet': "STRSPLITTOBAG(${1:string}, '${2:expression}', ${3:limit})'"
+  'description': 'Splits a string around matches of a given regular expression and returns a databag.'
+'substring':
+  'displayText': 'SUBSTRING()'
+  'snippet': "SUBSTRING(${1:string}, ${2:startIndex}, ${3:stopIndex})"
+  'description': 'Returns a substring from a given string. '
+'trim':
+  'displayText': 'TRIM()'
+  'snippet': 'TRIM(${1:string})'
+  'description': 'Returns a copy of a string with leading and trailing white space removed.'
+'upper':
+  'displayText': 'UPPER()'
+  'snippet': 'UPPER(${1:string})'
+  'description': 'Returns a string converted to upper case.'
+'topx':
+  'displayText' : 'TOP()'
+  'snippet': 'TOP(${1:topN}, ${2:column}, ${3:relation})'
+  'description': 'Returns the top-n tuples from a bag of tuples.'
+'bagtostring':
+  'displayText' : 'BagToString()'
+  "snippet": "BagToString(${1:bag}, ${2:delim})"
+  'description': 'Concatenate the elements of a Bag into a chararray string, placing an optional delimiter between each value.'
+'subtract':
+  'displayText': 'SUBTRACT()'
+  "snippet" : "SUBTRACT(${1:expr}, ${2:expr})"
+  'description': 'Bags subtraction, SUBTRACT(bag1, bag2) = bags composed of bag1 elements not in bag2'
+'round_to':
+  'displayText': 'ROUND_TO()'
+  "snippet" : "ROUND_TO(${1:val}, ${2:digits})"
+  'description': 'Returns the value of an expression rounded to a fixed number of decimal digits.'
+"endswith":
+  'displayText': "ENDSWITH()"
+  "snippet" : "ENDSWITH(${1:string}, ${2:testAgainst})"
+  'description': 'Tests inputs to determine if the first argument ends with the string in the second.'
+"equalsignorecase":
+  'displayText': "EqualsIgnoreCase()"
+  "snippet" : "EqualsIgnoreCase(${1:string}, ${2:string})"
+  'description': 'Compares two Strings ignoring case considerations. '
+"lcfirst":
+  'displayText': "LCFIRST()"
+  "snippet" : "LCFIRST(${1:string})"
+  'description': 'Converts the first character in a string to lower case. '
+"ltrim":
+  'displayText': "LTRIM()"
+  "snippet" : "LTRIM(${1:string})"
+  'description': 'Returns a copy of a string with only leading white space removed.'
+"rtrim":
+  'displayText': "RTRIM()"
+  "snippet" : "RTRIM(${1:string})"
+  'description': 'Returns a copy of a string with only trailing white space removed.'
+"sprintf":
+  'displayText': "SPRINTF()"
+  "snippet" : "SPRINTF(${1:format}, ${2:vals})"
+  'description': 'Formats a set of values according to a printf-style template, using the native Java Formatter library.'
+"startswith":
+  'displayText': "STARTSWITH()"
+  "snippet" : "STARTSWITH(${1:string}, ${2:testAgainst})"
+  'description': 'Tests inputs to determine if the first argument starts with the string in the second. '
+"ucfirst":
+  'displayText': "UCFIRST()"
+  "snippet" : "UCFIRST(${1:string})"
+  'description': 'Returns a string with the first character converted to upper case.'
+"tobag":
+  'displayText': "TOBAG()"
+  "snippet" : "TOBAG(${1:expr})"
+  'description': 'Converts one or more expressions to type bag.'
+"toptuple":
+  'displayText': "TOTUPLE()"
+  "snippet" : "TOTUPLE(${1:expr})"
+  'description': 'Converts one or more expressions to type tuple. '
+"tomap":
+  'displayText': "TOMAP()"
+  "snippet" : "TOMAP(${1:key}, ${2:value})"
+  'description': 'Converts key/value expression pairs into a map. '

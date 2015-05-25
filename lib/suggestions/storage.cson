@@ -1,0 +1,48 @@
+"BinStorage":
+  'displayText': "BinStorage()"
+  'snippet': "BinStorage()"
+  'description': 'Loads and stores data in machine-readable format.'
+"PigDump":
+  'displayText': "PigDump()"
+  'snippet': "PigDump()"
+  'description': 'Stores data in UTF-8 format.'
+"PigStorage":
+  'displayText': "PigStorage()"
+  'snippet': "PigStorage()"
+  'description': 'Loads and stores data as structured text files.'
+"TextLoader":
+  'displayText': "TextLoader()"
+  'snippet': "TextLoader()"
+  'description': 'Loads unstructured data in UTF-8 format.'
+"JsonLoader":
+  'displayText': "JsonLoader(schema)"
+  "snippet" : "JsonLoader(${1:schema})"
+  'description': 'Load JSON data.'
+"JsonStorage":
+  'displayText': "JsonStorage()"
+  "snippet" : "JsonStorage()"
+  'description': 'Store JSON data.'
+"PigStorage":
+  'displayText': "PigStorage(delim)"
+  "snippet" : "PigStorage('${1:delim}')"
+  'description': 'Loads and stores data as structured text files.'
+'HBaseStorage':
+  'displayText': "HBaseStorage()"
+  "snippet" : "HBaseStorage()"
+  'description': 'Loads and stores data from an HBase table.'
+"AvroStorage":
+  'displayText': "AvroStorage()"
+  "snippet" : "AvroStorage()"
+  'description': 'Loads and stores data from Avro files.'
+'TrevniStorage':
+    'displayText': "TrevniStorage()"
+    "snippet" : "TrevniStorage()"
+    'description': 'Loads and stores data from Trevni files.'
+'AccumuloStorage':
+  'displayText': "AccumuloStorage()"
+  "snippet" : "AccumuloStorage()"
+  'description': 'Loads or stores data from an Accumulo table.'
+'OrcStorage':
+  'displayText': "OrcStorage()"
+  "snippet" : "OrcStorage()"
+  'description': 'Loads from or stores data to Orc file.'

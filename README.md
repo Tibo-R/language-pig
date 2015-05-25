@@ -1,10 +1,14 @@
 # Pig package for Atom
 
-Adds syntax highlighting and autocompletion to Pig scripts in Atom.
+Syntax highlighting and autocompletion for Apache Pig scripts in Atom Editor.
 
-In order to have the full autocompletion system, you need the atom package [Autocomplete Snippets](https://atom.io/packages/autocomplete-snippets) 
+## Features
+ - **Syntax highlighting** for Pig Latin
+ - **Autocompletion** for all basics and built in functions
+ - Quick access to the **documentation** in autocomplete+
 
-#Based on the work from :
+
+##Inspired by the work of :
 
 - lumengxi : https://github.com/lumengxi/language-pig (atom package)
 - chrislongo : https://github.com/chrislongo/Pig (sublime-text package)

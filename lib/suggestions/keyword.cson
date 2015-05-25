@@ -1,0 +1,42 @@
+"ALL ":
+  'text': "ALL "
+"AS ":
+  'text': "AS "
+"BY ":
+  'text': "BY "
+"DEFINE ":
+  'text': "DEFINE "
+"IMPORT ":
+  'text': "IMPORT "
+"INTO ":
+  'text': "INTO "
+"MAPREDUCE ":
+  'text': "MAPREDUCE "
+"STREAM ":
+  'text': "STREAM "
+"THROUGH ":
+  'text': "THROUGH "
+"UNION ":
+  'text': "UNION "
+"RETURNS ":
+  'text': "RETURNS "
+"ROLLUP ":
+  'text': "ROLLUP "
+"DESC ":
+  'text': "DESC "
+"DUMP ":
+  'text': "DUMP "
+"DESCRIBE ":
+  'text': "DESCRIBE "
+"EXPLAIN ":
+  'text': "EXPLAIN "
+"GENERATE ":
+  'text': "GENERATE "
+"ILLUSTRATE ":
+  'text': "ILLUSTRATE "
+"USING ":
+  'text': "USING "
+"PARALLEL" :
+  'text': "PARALLEL "
+"MATCHES":
+  'text': "MATCHES "

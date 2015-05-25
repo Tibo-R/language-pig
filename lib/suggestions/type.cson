@@ -1,0 +1,26 @@
+"int":
+  'text': "int"
+"long":
+  'text': "long"
+"float":
+  'text': "float"
+"double":
+  'text': "double"
+"chararray":
+  'text': "chararray"
+"bytearray":
+  'text': "bytearray"
+"boolean":
+  'text': "boolean"
+"datetime":
+  'text': "datetime"
+"biginteger":
+  'text': "biginteger"
+"bigdecimal":
+  'text': "bigdecimal"
+"tuple":
+  'text': "tuple"
+"bag":
+  'text': "bag"
+"map":
+  'text': "map"

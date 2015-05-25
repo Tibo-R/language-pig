@@ -1,7 +1,7 @@
 {
   "name": "pig",
   "version": "0.5.1",
-  "description": "Pig support : syntax highlighting and autocompletion for most Pig functions and keywords (using 'Autocomplete Snippets')",
+  "description": "Pig support : syntax highlighting and autocompletion for most Pig functions and keywords",
   "repository": {
     "type": "git",
     "url": "https://github.com/tibo-r/language-pig"
@@ -17,6 +17,20 @@
     "atom",
     "editor",
     "syntax",
-    "autocompletion"
-  ]
+    "autocomple",
+    "autocompletion",
+    "PigLatin"
+  ],
+  "main": "./lib/main",
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "provide"
+      }
+    }
+  },
+  "dependencies": {
+    "season": "~5.2.0",
+    "string_score": "~0.1.22"
+  }
 }

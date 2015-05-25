@@ -1,0 +1,97 @@
+"add-duration":
+  'displayText': "AddDuration("
+  'snippet': "AddDuration(${1:datetime}, ${2:duration})"
+  'description': 'Returns the result of a DateTime object plus a Duration object.'
+"current-time":
+  'displayText': "CurrentTime()"
+  'snippet': "CurrentTime()"
+  'description': 'Returns the DateTime object of the current time.'
+"days-between":
+  'displayText': "DaysBetween()"
+  "snippet" : "DaysBetween(${1:datetime1}, ${2:
+  datetime2})"
+  'description': 'Returns the number of days between two DateTime objects.'
+"get-day":
+  'displayText': "GetDay()"
+  "snippet" : "GetDay(${1:datetime})"
+  'description': 'Returns the day of a month from a DateTime object.'
+"get-hour":
+  'displayText': "GetHour()"
+  "snippet" : "GetHour(${1:datetime})"
+  'description': 'Returns the hour of a day from a DateTime object.'
+"get-milliSecond":
+  'displayText': "GetMilliSecond()"
+  "snippet" : "GetMilliSecond(${1:datetime})"
+  'description': 'Returns the millisecond of a second from a DateTime object.'
+"get-minute":
+  'displayText': "GetMinute()"
+  "snippet" : "GetMinute(${1:datetime})"
+  'description': 'Returns the minute of a hour from a DateTime object.'
+"get-month":
+  'displayText': "GetMonth()"
+  "snippet" : "GetMonth(${1:datetime})"
+  'description': 'Returns the month of a year from a DateTime object.'
+"get-second":
+  'displayText': "GetSecond()"
+  "snippet" : "GetSecond(${1:datetime})"
+  'description': 'Returns the second of a minute from a DateTime object.'
+"get-week":
+  'displayText': "GetWeek()"
+  "snippet" : "GetWeek(${1:datetime})"
+  'description': 'Returns the week of a week year from a DateTime object.'
+"get-week-year":
+  'displayText': "GetWeekYear()"
+  "snippet" : "GetWeekYear(${1:datetime})"
+  'description': 'Returns the week year from a DateTime object.'
+"get-year":
+  'displayText': "GetYear()"
+  "snippet" : "GetYear(${1:datetime})"
+  'description': 'Returns the year from a DateTime object.'
+"hours-between":
+  'displayText': "HoursBetween()"
+  "snippet" : "DaysBetween(${1:datetime1}, ${2:datetime2})"
+  'description': 'Returns the number of hours between two DateTime objects.'
+"milli-seconds-between":
+  'displayText': "MilliSecondsBetween()"
+  "snippet" : "MilliSecondsBetween(${1:datetime1}, ${2:datetime2})"
+  'description': 'Returns the number of milliseconds between two DateTime objects.'
+"minutes-between":
+  'displayText': "MinutesBetween()"
+  "snippet" : "MinutesBetween(${1:datetime1}, ${2:datetime2})"
+  'description': 'Returns the number of minutes between two DateTime objects.'
+"months-between":
+  'displayText': "MonthsBetween()"
+  "snippet" : "MonthsBetween(${1:datetime1}, ${2:datetime2})"
+  'description': 'Returns the number of months between two DateTime objects.'
+"seconds-between":
+  'displayText': "SecondsBetween()"
+  "snippet" : "SecondsBetween(${1:datetime1}, ${2:datetime2})"
+  'description': 'Returns the number of seconds between two DateTime objects.'
+"subtract-duration":
+  'displayText': "SubtractDuration()"
+  "snippet" : "SubtractDuration(${1:datetime}, ${2:duration})"
+  'description': 'Returns the result of a DateTime object minus a Duration object.'
+"to-date":
+  'displayText': "ToDate()"
+  "snippet" : "ToDate(${1:param})"
+  'description': 'Returns a DateTime object according to parameters.'
+"to-milli-seconds":
+  'displayText': "ToMilliSeconds()"
+  "snippet" : "ToMilliSeconds(${1:datetime})"
+  'description': 'Returns the number of milliseconds elapsed since January 1, 1970, 00:00:00.000 GMT for a DateTime object. '
+"to-string":
+  'displayText': "ToString()"
+  "snippet" : "ToString(${1:datetime} [, ${2:format}])"
+  'description': 'ToString converts the DateTime object to the ISO or the customized string. '
+"to-unix-time":
+  'displayText': "ToUnixTime()"
+  "snippet" : "ToUnixTime(${1:datetime})"
+  'description': 'Returns the Unix Time as long for a DateTime object. UnixTime is the number of seconds elapsed since January 1, 1970, 00:00:00.000 GMT. '
+"weeks-between":
+  'displayText': "WeeksBetween()"
+  "snippet" : "WeeksBetween(${1:datetime1}, ${2:datetime2})"
+  'description': 'Returns the number of weeks between two DateTime objects.'
+"years-between":
+  'displayText': "YearsBetween()"
+  "snippet" : "YearsBetween(${1:datetime1}, ${2:datetime2})"
+  'description': 'Returns the number of years between two DateTime objects.'

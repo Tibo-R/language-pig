@@ -1,0 +1,80 @@
+'flatten':
+  'displayText': 'FLATTEN()'
+  'snippet': 'FLATTEN(${1:var})'
+  'description': 'Substitutes the fields of a tuple in place of the tuple.'
+"assert":
+  'displayText': 'ASSERT'
+  'snippet': 'ASSERT ${1:alias} BY ${2:expression}'
+  'description': 'Assert a condition on the data.'
+"cogroup":
+  'displayText': 'COGROUP'
+  'snippet': 'COGROUP ${1:alias} BY ${1:expression}'
+  'description': 'Groups the data in one or more relations.'
+"cross":
+  'displayText': 'CROSS'
+  'snippet': 'CROSS '
+  'description': 'Computes the cross product of two or more relations.'
+"cube":
+  'displayText': 'CUBE'
+  'snippet': 'CUBE ${1:alias} BY '
+  'description': 'Performs cube/rollup operations.'
+"distinct":
+  'displayText': 'DISTINCT'
+  'snippet': 'DISTINCT ${1:alias}'
+  'description': 'Removes duplicate tuples in a relation.'
+"filter":
+  'displayText': 'FILTER'
+  'snippet': 'FILTER ${1:alias} BY ${2:expression}'
+  'description': 'Selects tuples from a relation based on some condition.'
+"foreach":
+  'displayText': 'FOREACH'
+  'snippet': 'FOREACH '
+  'description': 'Generates data transformations based on columns of data.'
+"group":
+  'displayText': 'GROUP'
+  'snippet': 'GROUP ${1:alias} BY ${2:expression}'
+  'description': 'Groups the data in one or more relations.'
+"join":
+  'displayText': 'JOIN'
+  'snippet': 'JOIN ${1:alias} BY '
+  'description': 'Performs an inner join of two or more relations based on common field values.'
+"limit":
+  'displayText': 'LIMIT'
+  'snippet': 'LIMIT ${1:alias} ${2:n}'
+  'description': 'Limits the number of output tuples.'
+"load":
+  'displayText': 'LOAD'
+  'snippet': "LOAD '${1:data}'"
+  'description': 'Loads data from the file system.'
+"order-by":
+  'displayText': 'ORDER BY'
+  'snippet': "ORDER ${1:alias} BY"
+  'description': 'Sorts a relation based on one or more fields.'
+"rank":
+  'displayText': 'RANK'
+  'snippet': "RANK ${1:alias}"
+  'description': 'Returns each tuple with the rank within a relation.'
+"sample":
+  'displayText': 'SAMPLE'
+  'snippet': 'SAMPLE ${1:alias} ${2:size}'
+  'description': 'Selects a random sample of data based on the specified sample size.'
+"split":
+  'displayText': 'SPLIT'
+  'snippet': 'SPLIT ${1:alias} INTO ${2:alias} IF ${3:expression}, ${4:alias} IF ${5:expression}'
+  'description': 'Partitions a relation into two or more relations.'
+"store":
+  'displayText': 'STORE'
+  'snippet': "STORE ${1:alias} INTO '${2:directory}'"
+  'description': 'Stores or saves results to the file system.'
+"stream":
+  'displayText': 'STREAM'
+  'snippet': "STREAM ${1:alias}"
+  'description': 'Sends data to an external script or program.'
+"union":
+  'displayText': 'UNION'
+  'snippet': "UNION ${1:alias}, ${2:alias}"
+  'description': 'Computes the union of two or more relations.'
+"register":
+  'displayText': 'REGISTER'
+  'snippet': "REGISTER ${1:path}"
+  'description': 'Registers a JAR file so that the UDFs in the file can be used.'
