@@ -1,6 +1,6 @@
 {
   "name": "pig",
-  "version": "0.5.1",
+  "version": "1.0.0",
   "description": "Pig support : syntax highlighting and autocompletion for most Pig functions and keywords",
   "repository": {
     "type": "git",
